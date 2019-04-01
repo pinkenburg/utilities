@@ -1,5 +1,5 @@
-# This list must be kept up-to-date with respect to the list of
-# modules in CVS
+# first the m4 macros which we need to configure our software
+coresoftware/m4|pinkenburg@bnl.gov
 coresoftware/offline/packages/Half|pinkenburg@bnl.gov
 online_distribution/newbasic|purschke@bnl.gov
 online_distribution/pmonitor|purschke@bnl.gov
