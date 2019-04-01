@@ -566,14 +566,18 @@ print LOG "===========================================\n";
 	print LOG "========================================================\n";
 	print LOG "configuring package $m                                  \n";
 	print LOG "at $date                                                \n";
-	    if ( $opt_scanbuild && exists $scanbuildignore{$m})
-	    {
-		$arg = "env $compileFlags $sdir/autogen.sh --prefix=$installDir";
-	    }
-	    else
-	    {
-		$arg = "env $compileFlags $scanbuild $sdir/autogen.sh --prefix=$installDir --cache-file=$buildDir/config.cache";
-	    }
+	if ( $opt_scanbuild && exists $scanbuildignore{$m})
+	  {
+	    $arg = "env $compileFlags $sdir/autogen.sh --prefix=$installDir";
+	  }
+	else
+	  {
+	    $arg = "env $compileFlags $scanbuild $sdir/autogen.sh --prefix=$installDir --cache-file=$buildDir/config.cache";
+            if ($sdir =~ /m4/) # the m4 macros have to be installed for the other configs
+              {
+                $arg = sprintf("%s; make install",$arg);
+              }
+	  }
 	print LOG "Running $arg\n";
 	print LOG "========================================================\n";
 
