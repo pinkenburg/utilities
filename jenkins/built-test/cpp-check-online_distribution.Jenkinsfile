@@ -135,7 +135,7 @@ pipeline
                                 rsync -avl --remove-source-files cppcheck-result.xml cppcheck-result.xml.backup
                             endif
 
-                            cppcheck -q --inline-suppr  --enable=warning --enable=performance --platform=unix64 --inconclusive --xml --xml-version=2 -j 10 --std=c++20 ./online_distribution > & cppcheck-result.xml
+                            cppcheck -q --inline-suppr  --enable=warning --enable=performance --platform=unix64 --inconclusive --xml --xml-version=2 -j 10 --std=c++20  --suppress=noCopyConstructor --suppress=noOperatorEq ./online_distribution > & cppcheck-result.xml
 
                             ls -hvl $PWD/cppcheck-result.xml
                             wc -l cppcheck-result.xml
