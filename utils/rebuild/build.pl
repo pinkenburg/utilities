@@ -73,6 +73,7 @@ my %externalRootPackages = (
     "DD4hep" => "DD4hep",
     "eic-smear" => "eic-smear",
     "EvtGen" => "EvtGen",
+    "garfieldpp" => "garfieldpp",
     "HepMC3" => "HepMC3",
     "KFParticle" => "KFParticle",
     "PHOTOS" => "PHOTOS",
