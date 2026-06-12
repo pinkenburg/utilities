@@ -17,6 +17,13 @@ cd ${WORKSPACE}
 ln -sbfv build/new/install.1 ./install
 ls -lhcv
 
+
+echo "-----------------------------------"
+echo " ACTS header installation from daily build"
+echo "-----------------------------------"
+
+rsync -avl $OFFLINE_MAIN/include/Acts/ ${WORKSPACE}/install/include/Acts/
+
 echo "-----------------------------------"
 echo " Clang Tidy Check "
 echo "-----------------------------------"
