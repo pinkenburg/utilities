@@ -28,7 +28,7 @@ echo "-----------------------------------"
 echo " Clang Tidy Check "
 echo "-----------------------------------"
 
-export OFFLINE_MAIN=$WORKSPACE/install
+export OFFLINE_MAIN=$WORKSPACE/build/new/install.1/
 echo source /cvmfs/sphenix.sdcc.bnl.gov/${system_config}/opt/sphenix/core/bin/sphenix_setup.sh new;
 source /cvmfs/sphenix.sdcc.bnl.gov/${system_config}/opt/sphenix/core/bin/sphenix_setup.sh new;
 
@@ -78,7 +78,7 @@ mkdir -p "$OUTDIR"
 COMPILE_ARGS_STR="
   -Wall -Werror -Wshadow -std=c++20 -Wno-dangling
   -isystem$WORKSPACE/macros/common
-  -isystem$WORKSPACE/include
+  -isystem$OFFLINE_MAIN/include
   -isystem$ROOTSYS/include
   -isystem$G4_MAIN/include
   -isystem$G4_MAIN/include/Geant4
