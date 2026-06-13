@@ -78,7 +78,7 @@ mkdir -p "$OUTDIR"
 COMPILE_ARGS_STR="
   -Wall -Werror -Wshadow -std=c++20 -Wno-dangling
   -isystem$WORKSPACE/macros/common
-  -isystem$OFFLINE_MAIN/include
+  -isystem$WORKSPACE/include
   -isystem$ROOTSYS/include
   -isystem$G4_MAIN/include
   -isystem$G4_MAIN/include/Geant4
