@@ -22,9 +22,7 @@ echo "-----------------------------------"
 echo " ACTS header installation from daily build"
 echo "-----------------------------------"
 
-rsync -avl $OFFLINE_MAIN/include/Acts/ ${WORKSPACE}/install/include/Acts/
-rsync -avl $OFFLINE_MAIN/include/ActsPlugins/ ${WORKSPACE}/install/include/ActsPlugins/
-rsync -avl $OFFLINE_MAIN/include/ActsExamples/ ${WORKSPACE}/install/include/ActsExamples/
+rsync -avl $OFFLINE_MAIN/include/Acts* ${WORKSPACE}/install/include/
 
 echo "-----------------------------------"
 echo " Clang Tidy Check "
