@@ -381,6 +381,21 @@ pipeline
 										}						   				    
 									}				
 								}
+								stage('test-default-valgrind-CaloProduction-Year2_Fitting')
+								{
+									
+									when {
+				    				// case insensitive regular expression for truthy values
+										expression { return run_valgrind_test ==~ /(?i)(Y|YES|T|TRUE|ON|RUN)/ }
+									}
+									steps 
+									{												    		
+										script
+										{
+											runCheckTest('test-default-valgrind-CaloProduction-Year2_Fitting')	
+										}						   				    
+									}				
+								}
 
 								//---------------------------
 								// Tracking Production StreamingProduction
