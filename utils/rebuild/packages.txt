@@ -103,6 +103,7 @@ coresoftware/offline/packages/decayfinder|cdean@bnl.gov
 # HFTrackEfficiency needs DecayFinder
 coresoftware/offline/packages/HFTrackEfficiency|cdean@bnl.gov
 # Offline tracking software
+coresoftware/offline/packages/tpctrackreco|mariia.mitrankova@stonybrook.edu
 coresoftware/offline/packages/trackreco|josborn1@bnl.gov
 coresoftware/offline/packages/TrackerMillepedeAlignment|afrawley@fsu.edu
 coresoftware/offline/packages/TrackingDiagnostics|josborn1@bnl.gov
